@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.box {
+  background-color: aquamarine;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.h-10 {
+  height: 20px;
+}
