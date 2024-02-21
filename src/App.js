@@ -1,32 +1,25 @@
 // App.js
 import React from "react";
-import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import About from "./RouteComponents/About";
 import Contact from "./RouteComponents/Contact";
 import Home from "./RouteComponents/Home";
+import Login from "./RouteComponents/Login";
+import Navbar from "./RouteComponents/Navbar";
+import NotFound from "./RouteComponents/NotFound";
 
 function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
+        <Navbar />
 
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
